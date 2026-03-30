@@ -24,7 +24,7 @@ classifiers = [
 
 dependencies = [
     "xarray>=2022.6",
-    "netCDF4>=1.6",
+    "netcdf4>=1.6",
     "fsspec>=2022.11",
     "requests>=2.28",
     "pandas>=1.5",
