@@ -58,7 +58,7 @@ variants are not included. See the original CAMELS publications for details.
 Install directly from GitHub. Data is fetched on-demand from GitHub raw URLs — nothing is downloaded to disk upfront.
 
 ```python
-!pip install git+https://github.com/andrbenn/minicamels.git
+!pip install git+https://github.com/BennettHydroLab/minicamels.git
 
 from minicamels import MiniCamels
 ds = MiniCamels()
@@ -70,7 +70,7 @@ You can paste these three lines into any Colab notebook and be ready to go.
 ### Local (after cloning)
 
 ```bash
-git clone https://github.com/andrbenn/minicamels.git
+git clone https://github.com/BennettHydroLab/minicamels.git
 cd minicamels
 pip install -e .
 ```
