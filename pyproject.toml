@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=42", "setuptools-scm>=6"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minicamels"
+dynamic = ["version"]
+description = "A pared-down CAMELS-US hydrological dataset for teaching"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "CC-BY-4.0" }
+keywords = ["hydrology", "CAMELS", "streamflow", "education", "xarray"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+
+dependencies = [
+    "xarray>=2022.6",
+    "netCDF4>=1.6",
+    "fsspec>=2022.11",
+    "requests>=2.28",
+    "pandas>=1.5",
+    "numpy>=1.23",
+    "matplotlib>=3.6",
+    "scipy>=1.9",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "pytest-cov",
+    "ruff",
+    "mypy",
+    "pre-commit",
+]
+notebook = [
+    "jupyter",
+    "ipykernel",
+]
+
+[project.urls]
+Homepage = "https://github.com/andrbenn/minicamels"
+Repository = "https://github.com/andrbenn/minicamels"
+Issues = "https://github.com/andrbenn/minicamels/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
+write_to = "src/minicamels/_version.py"
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--tb=short"
+
+[dependency-groups]
+dev = [
+    "nbformat>=5.10.4",
+]
