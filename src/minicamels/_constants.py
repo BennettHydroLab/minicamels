@@ -6,7 +6,7 @@ Streamflow (qobs) is USGS observed discharge normalized to mm/day.
 """
 
 REMOTE_BASE_URL = (
-    "https://raw.githubusercontent.com/andrbenn/minicamels/main/data/"
+    "https://raw.githubusercontent.com/BennettHydroLab/minicamels/main/data/"
 )
 
 DATE_START = "1980-10-01"
