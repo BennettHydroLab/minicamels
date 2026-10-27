@@ -27,7 +27,7 @@ ds.plot_map(color_by="aridity")
 Works in Google Colab and JupyterHub with no local data download:
 
 ```python
-!pip install git+https://github.com/andrbenn/minicamels.git
+!pip install git+https://github.com/BennettHydroLab/minicamels.git
 from minicamels import MiniCamels
 ds = MiniCamels()   # data is fetched from GitHub raw URLs automatically
 ```
